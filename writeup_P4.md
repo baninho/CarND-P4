@@ -137,3 +137,4 @@ I used the `Line` class to retain some state between frames and introduce filter
 
 This may cause unfavorable results when the car drives off the current lane, i. e. when switching lanes. To avoid this, only a certain count of found lane lines should be allowed to be discarded consecutively or a constant change in coefficients over several frames could be recognized and the checks modified accordingly.
 
+To make the detection more robust more checks should be added, such as comparison of radii of left and right lane line. It might also be helpful to try and retain more information when combining several binary images. For example a weighted image could be created to indicate whether a feature was identified only by one or multiple thresholds, the latter would imply a higher confidence that a lane line has been found.
